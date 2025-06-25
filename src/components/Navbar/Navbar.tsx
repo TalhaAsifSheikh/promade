@@ -13,6 +13,10 @@ const NavbarContainer = styled.nav`
   display: flex;
   justify-content: center;
 
+  @media (max-width: 900px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 `;
 
 const Drawer = styled.div<{ $open?: boolean }>`
@@ -65,11 +69,12 @@ const NavContent = styled.div`
     padding: 8px 8px;
   }
   @media (max-width: 900px) {
-    width: 100vw;
+    max-width: 100%;
+    width: 100%;
     height: auto;
     flex-direction: row;
     align-items: center;
-    padding: 8px 4px;
+    padding: 8px 12px;
     border-radius: 24px;
     justify-content: space-between;
   }

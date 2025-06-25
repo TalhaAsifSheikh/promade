@@ -167,6 +167,38 @@ const WorkCategory = styled.p`
   }
 `;
 
+const ArrowIcon = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.4,0,0.2,1);
+  margin: 12px auto 0 auto;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+
+  ${WorkItem}:hover &,
+  ${WorkImageContainer}:hover + ${WorkInfo} & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 900px) {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const workData = [
   {
     image: '/Work/zakatapp.png',
@@ -224,6 +256,21 @@ const Work = () => {
                 </WorkTitle>
                 <WorkCategory>{item.category}</WorkCategory>
               </WorkText>
+              <ArrowIcon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </ArrowIcon>
             </WorkInfo>
           </WorkItem>
         ))}

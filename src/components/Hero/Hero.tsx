@@ -92,6 +92,13 @@ const Button = styled.button<{ primary?: boolean }>`
 `;
 
 const Hero = () => {
+  const handleScroll = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <HeroSection>
       <HeroContent>
@@ -100,8 +107,8 @@ const Hero = () => {
           <i>engagement</i>, more <i>conversion</i>.
         </HeroText>
         <ButtonGroup>
-          <Button primary>Book a Call</Button>
-          <Button>View our Work</Button>
+          <Button primary onClick={() => handleScroll('booking')}>Book a Call</Button>
+          <Button onClick={() => handleScroll('work')}>View our Work</Button>
         </ButtonGroup>
       </HeroContent>
     </HeroSection>

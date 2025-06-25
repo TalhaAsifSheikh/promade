@@ -277,6 +277,14 @@ const Copyright = styled.p`
 `;
 
 const Footer = () => {
+  const handleScroll = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById('booking');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <FooterContainer>
       <ContentWrapper>
@@ -286,7 +294,7 @@ const Footer = () => {
           </Link>
           <Title>Want to work together?</Title>
           <Subtitle>Book a free project discussion below.</Subtitle>
-          <CTAButton as={Link} to="#contact">Book a Discovery Call</CTAButton>
+          <CTAButton as={Link} to="#contact" onClick={handleScroll}>Book a Discovery Call</CTAButton>
           <BackgroundImage src="/bg12.jpg" alt="" />
         </CtaSection>
         <InfoSection>

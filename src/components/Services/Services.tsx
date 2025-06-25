@@ -109,6 +109,14 @@ const ServiceCard = styled.div`
   width: 100%;
   max-width: 420px;
   box-sizing: border-box;
+  transition: box-shadow 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s cubic-bezier(0.4,0,0.2,1);
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(75, 30, 126, 0.18), 0 1.5px 8px rgba(0,0,0,0.12);
+    transform: translateY(-8px) scale(1.03);
+    background: linear-gradient(40deg, rgba(75, 30, 126, 0.18) 80%, rgba(255, 255, 255, 0.25) 100%);
+    border-color: rgba(75, 30, 126, 0.25);
+  }
 
   @media (max-width: 900px) {
     max-width: 95vw;

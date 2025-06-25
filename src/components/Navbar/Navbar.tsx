@@ -50,7 +50,7 @@ const CloseButton = styled.button`
 const NavContent = styled.div`
   width: 770px;
   height: 72px;
-  border-radius: 48px;
+  border-radius: 60px;
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 10px 16px 10px 12px;
@@ -70,7 +70,7 @@ const NavContent = styled.div`
     flex-direction: row;
     align-items: center;
     padding: 8px 4px;
-    border-radius: 0;
+    border-radius: 24px;
     justify-content: space-between;
   }
 `;
@@ -241,6 +241,10 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
+  const handleBookCall = (e: React.MouseEvent) => {
+    handleNavigation(e, 'booking');
+  };
+
   return (
     <NavbarContainer>
       <NavContent>
@@ -294,7 +298,7 @@ const Navbar = () => {
             </PlayIcon>
             Grand Portfolio
           </a>
-          <BookCallButton>Book a Call</BookCallButton>
+          <BookCallButton onClick={handleBookCall}>Book a Call</BookCallButton>
         </NavLinks>
       </NavContent>
       <Drawer $open={menuOpen}>
@@ -340,7 +344,7 @@ const Navbar = () => {
           </PlayIcon>
           Grand Portfolio
         </a>
-        <BookCallButton style={{ width: '100%', margin: '24px 0 0 0' }}>Book a Call</BookCallButton>
+        <BookCallButton style={{ width: '100%', margin: '24px 0 0 0' }} onClick={handleBookCall}>Book a Call</BookCallButton>
       </Drawer>
     </NavbarContainer>
   );

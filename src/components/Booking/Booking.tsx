@@ -40,8 +40,8 @@ const Description = styled.p`
 
 const BookingMenu = styled.div`
   width: 100%;
-  max-width: 1024px;
-  height: 500px;
+  max-width: 600px;
+  height: 650px;
   background-color: #d9d9d9;
   display: flex;
   align-items: center;
@@ -53,11 +53,11 @@ const BookingMenu = styled.div`
 
   @media (max-width: 900px) {
     max-width: 100vw;
-    height: 500px;
+    height: 600px;
   }
   @media (max-width: 600px) {
     max-width: 100vw;
-    height: 420px;
+    height: 520px;
     font-size: 18px;
     padding: 0;
     margin-left: 0;
@@ -74,7 +74,7 @@ const Booking = () => {
       </Description>
       <BookingMenu>
         <InlineWidget
-          url="https://calendly.com/talhasifsheikh"
+          url="https://calendly.com/talhasifsheikh/30min"
           styles={{ minWidth: '100%', height: '100%', border: 'none' }}
           pageSettings={{ backgroundColor: 'ffffff', hideEventTypeDetails: false, hideLandingPageDetails: false }}
         />

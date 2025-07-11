@@ -211,20 +211,39 @@ const PlayIcon = styled.svg`
 `;
 
 const BookCallButton = styled.button`
-  background: white;
-  color: black;
+  background: linear-gradient(90deg, #fff 0%, #f3f3f3 100%);
+  color: #181818;
   border: none;
-  border-radius: 45px;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: box-shadow 0.25s cubic-bezier(0.4,0,0.2,1),
+              transform 0.18s cubic-bezier(0.4,0,0.2,1),
+              background 0.25s cubic-bezier(0.4,0,0.2,1),
+              color 0.25s cubic-bezier(0.4,0,0.2,1);
   white-space: nowrap;
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'Satoshi', 'Inter', 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 2px 12px 0 rgba(30,30,30,0.08), 0 1.5px 4px 0 rgba(0,0,0,0.04);
+  letter-spacing: 0.01em;
+  outline: none;
+  border: 1.5px solid #eaeaea;
 
-  &:hover {
-    transform: scale(1.05);
+  &:hover, &:focus {
+    background: linear-gradient(90deg, #f7f7f7 0%, #eaeaea 100%);
+    color: #111;
+    box-shadow: 0 4px 24px 0 rgba(30,30,30,0.13), 0 2px 8px 0 rgba(0,0,0,0.07);
+    transform: translateY(-2px) scale(1.045);
+    border-color: #d1d1d1;
+  }
+
+  &:active {
+    background: #ededed;
+    color: #222;
+    box-shadow: 0 1px 4px 0 rgba(30,30,30,0.07);
+    transform: scale(0.98);
+    border-color: #e0e0e0;
   }
 
   @media (max-width: 900px) {
@@ -279,24 +298,24 @@ const Navbar = () => {
             Services
           </NavLink>
           <a 
-            href="https://www.figma.com/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{
-              textDecoration: 'none',
-              color: 'white',
-              fontSize: '18px',
-              fontWeight: 500,
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '8px 16px',
-              borderRadius: '24px',
-              transition: 'all 0.3s ease',
-              position: 'relative',
-              overflow: 'hidden',
-            }}
-          >
+          href="https://www.figma.com/proto/6Til2G4GOEcSWxkFgmvn2M/Promade-Designs?page-id=0%3A1&node-id=61-375&p=f&viewport=-3679%2C-1213%2C0.16&t=QajH3OrAWPVBdfdm-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=61%3A375" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{
+            textDecoration: 'none',
+            color: 'white',
+            fontSize: '18px',
+            fontWeight: 500,
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '8px 16px',
+            borderRadius: '24px',
+            transition: 'all 0.3s ease',
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
             <PlayIcon viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="12" cy="12" r="10" stroke="white" strokeWidth="1.5"/>
               <path d="M15.5 12L10.25 15.3301L10.25 8.66987L15.5 12Z" fill="white"/>
@@ -323,7 +342,7 @@ const Navbar = () => {
           Services
         </NavLink>
         <a 
-          href="https://www.figma.com/" 
+          href="https://www.figma.com/proto/6Til2G4GOEcSWxkFgmvn2M/Promade-Designs?page-id=0%3A1&node-id=61-375&p=f&viewport=-3679%2C-1213%2C0.16&t=QajH3OrAWPVBdfdm-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=61%3A375" 
           target="_blank" 
           rel="noopener noreferrer"
           style={{
